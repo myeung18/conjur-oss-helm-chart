@@ -14,7 +14,7 @@ if grep -q "$authenticators" <<< "$AUTHENTICATOR_ID"; then
   helm upgrade \
        -n "$CONJUR_NAMESPACE" \
        --reuse-values \
-       --set authenticators="authn\,$AUTHN_STRATEGY/$AUTHENTICATOR_ID" \
+       --set authenticators="authn\,authn-jwt/os-climate-poc\,$AUTHN_STRATEGY/$AUTHENTICATOR_ID" \
        --set logLevel="$CONJUR_LOG_LEVEL" \
        --wait \
        --timeout 300s \
