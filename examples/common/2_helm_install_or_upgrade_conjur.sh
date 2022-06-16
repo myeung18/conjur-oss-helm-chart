@@ -62,6 +62,6 @@ fi
 args+=("$HELM_RELEASE" \
       "../../conjur-oss")
 
-echo "helm" "${args[@]}"
+echo "helm $PLATFORM: " "${args[@]}"
 
 helm "${args[@]}"

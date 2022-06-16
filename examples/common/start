@@ -46,7 +46,7 @@ done
 announce "Sourcing customized environment in $customize_file"
 . "$customize_file"
 
-announce "Setting demo environment variable defaults"
+announce "Setting demo environment variable defaults - $env_file"
 
 . "$env_file"
 
@@ -68,8 +68,10 @@ fi
 announce "Retrieving the Conjur admin password"
 export CONJUR_ADMIN_PASSWORD="$(./3_retrieve_admin_password.sh)"
 
+announce "admin password $CONJUR_ADMIN_PASSWORD"
+
 announce "Enabling the Conjur Kubernetes authenticator if necessary"
 ./4_ensure_authn_k8s_enabled.sh
 
-announce "Deploying Conjur demo applications"
-./5_deploy_demo_apps.sh
+announce "Not---Deploying Conjur demo applications"
+###./5_deploy_demo_apps.sh

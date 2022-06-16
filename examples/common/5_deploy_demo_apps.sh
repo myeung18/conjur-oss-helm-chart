@@ -7,10 +7,10 @@ set -euo pipefail
 conjur_demo_scripts_path="temp/kubernetes-conjur-demo"
 
 # Clone the conjurdemos/kubernetes-conjur-demo repo
-##rm -rf "$conjur_demo_scripts_path"
-announce "Cloning Kubernetes Conjur Demo scripts to $conjur_demo_scripts_path - skipped. "
-#mkdir -p temp
-##git clone -b learning https://github.com/myeug18/kubernetes-conjur-demo "$conjur_demo_scripts_path"
+rm -rf "$conjur_demo_scripts_path"
+announce "Cloning Kubernetes Conjur Demo scripts to $conjur_demo_scripts_path - learning. "
+mkdir -p temp
+git clone -b learning https://github.com/myeung18/kubernetes-conjur-demo "$conjur_demo_scripts_path"
 
 # Because the kubernetes-conjur-demo scripts use a different naming convention
 # for the Conjur namespace env variable, some translation is required.
